@@ -10,13 +10,13 @@
 
 
 <script>
-d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/api_docs/mt_bruno_elevation.csv', function(err, rows){
+d3.csv('https://raw.githubusercontent.com/ws0407/testPlotly/master/yahoomail.csv', function(err, rows){
 function unpack(rows, key) {
   return rows.map(function(row) { return row[key]; });
 }
 
 var z_data=[ ]
-for(i=0;i<24;i++)
+for(i=0;i<100;i++)
 {
   z_data.push(unpack(rows,i));
 }
@@ -28,7 +28,7 @@ var data = [{
 
 var layout = {
   title: 'Mt Bruno Elevation',
-  autosize: false,
+  autosize: true,
   width: 500,
   height: 500,
   margin: {
